@@ -449,8 +449,9 @@
   }
   
   show heading.where(level: 1): it => {
+    it.numbering = "1.1.1"
     set text(size: 1.2em)
-    it.numbering + block(smallcaps(it.body))
+    block(smallcaps(it.body))
   }
   // Display the paper's contents.
   body
