@@ -299,7 +299,7 @@
   body
 ) = {
   set document(
-    title: title, 
+    title: text(title, size: 17.5pt), 
     author: if review == none { authors.map(a => to-string(a.name)) } else { () },
     keywords: keywords
   )
@@ -323,6 +323,7 @@
     bottom-edge: 0em
   )
   show heading: set text(size: font-size)
+  show heading.where(level: 1): set text(size: 1.2em)
   
   // Configure paragraph properties.
   // 12pt leading, i.e. 1.2x font-size (rule 3)
@@ -409,7 +410,9 @@
     } else {
       // Display authors and affiliaitons instead
       v(.5em) + acmart-authors(authors, ncols:authors-ncols)   
-      v(.5em) + acmart-affiliations(affiliations)
+      if affiliations != none {
+        v(.5em) + acmart-affiliations(affiliations)
+      }
     }
   })
   
@@ -435,10 +438,6 @@
     it
   }
   
-  show heading.where(level: 1): it => {
-    set text(size: 1.2em)
-    block(smallcaps(it.body))
-  }
   // Display the paper's contents.
   body
 }
