@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 PACKAGE_NAME="clean-acmart"
-PACKAGE_GIT="https://gitlab.up.pt/up202208755/$PACKAGE_NAME.git"
+PACKAGE_GIT="https://github.com/guilherme-ds-matos/$PACKAGE_NAME.git"
 VERSION="0.0.1"
 
 LINUX_DATA_HOME="$HOME/.local/share"
