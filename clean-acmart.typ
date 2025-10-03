@@ -406,7 +406,7 @@
       v(.5em) + text(size: 1.2em, [Submission: #review])
     } else {
       // Display authors and affiliaitons instead
-      v(.5em) + acmart-authors(authors, authors-ncols)   
+      v(.5em) + acmart-authors(authors, ncols:authors-ncols)   
       v(.5em) + acmart-affiliations(affiliations)
     }
   })
