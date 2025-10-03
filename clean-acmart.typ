@@ -175,9 +175,9 @@
   *ACM Reference Format:*
   #let names = authors.map(author => author.name)
   #if names.len() > 1 {
-    names.push(" and " + names.pop())
+    names.push("and " + names.pop())
   }
-  #names.join(","). <anon>
+  #names.join(", "). <anon>
   #conference.year
   #title.
   In _ #conference.name (#conference.short), #conference.date, #conference.year, #conference.venue. _
