@@ -191,9 +191,13 @@
     set align(center)
     text(
       1.2em,
+      author.remove("name"),
+    )
+    text(
+      0.5em,
       link(
-        "mailto:" + to-string(author.remove("email")),
-        author.remove("name"),
+        "mailto:" + to-string(author.get("email")),
+        author.remove("email"),
       ),
     ) + author.remove("mark", default: [])
     for (k, v) in author [\ #v]
