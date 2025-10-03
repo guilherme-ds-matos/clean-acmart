@@ -2,7 +2,7 @@
 name = "clean-acmart"
 version = "0.0.1"
 entrypoint = "clean-acmart.typ"
-authors = ["Junliang Hu <jlhu@cse.cuhk.edu.hk>"]
+authors = ["Junliang Hu <jlhu@cse.cuhk.edu.hk>", "Guilherme Matos <up202208755@up.pt>"]
 license = "MIT"
 description = "Simple and clean Typst paper template for ACM conferences following the original acmart style."
 repository = "https://github.com/vtta/clean-acmart"

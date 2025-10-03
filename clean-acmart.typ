@@ -1,6 +1,7 @@
 // MIT License
 //
 // Copyright (c) 2023-2025 Junliang HU <jlhu@cse.cuhk.edu.hk>
+// Copyright (c) 2025 Guilherme Duarte Silva Matos <up202208755@up.pt>
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -243,6 +244,7 @@
       // mark: super[1],
     ),
   ),
+  authors-ncols: 3,
 
   // An array of affiliations. To be used when you want to seperate affiliation information from authors.
   // affiliations: (
@@ -316,7 +318,10 @@
     bottom-edge: 0em
   )
   show heading: set text(size: font-size)
-  show heading.where(level: 1): set text(size: 1.2em)
+  show heading.where(level: 1): it => block(width: 100%)[
+    #set text(size: 1.2em)
+    #smallcaps(it.body)
+  ]
   // Configure paragraph properties.
   // 12pt leading, i.e. 1.2x font-size (rule 3)
   set block(spacing: leading)
@@ -401,7 +406,7 @@
       v(.5em) + text(size: 1.2em, [Submission: #review])
     } else {
       // Display authors and affiliaitons instead
-      v(.5em) + acmart-authors(authors)   
+      v(.5em) + acmart-authors(authors, authors-ncols)   
       v(.5em) + acmart-affiliations(affiliations)
     }
   })
