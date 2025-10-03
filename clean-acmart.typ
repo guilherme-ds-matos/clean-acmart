@@ -192,14 +192,15 @@
     text(
       1.2em,
       author.remove("name"),
-    )
+    ) + author.remove("mark", default: []) 
+    linebreak()
     text(
       0.5em,
       link(
-        "mailto:" + to-string(author.get("email")),
+        "mailto:" + to-string(author.at("email")),
         author.remove("email"),
       ),
-    ) + author.remove("mark", default: [])
+    ) 
     for (k, v) in author [\ #v]
   }
   for i in range(calc.ceil(authors.len() / ncols)) [
