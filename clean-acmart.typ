@@ -154,27 +154,16 @@
 // )
 #let acmart-ccs(ccs-concepts) = [
   #set par(first-line-indent: 0em)
-  text([#smallcaps([CCS Concepts])], size: 1.2em)
   *
+  _CCS Concepts:_ 
   #ccs-concepts.map(concept => 
     [ #sym.bullet #concept.generic #sym.arrow.r #concept.specific.join("; ")]
   ).join("; ").
   *
 ]
 
-#let acmart-abstract(abstract) = {
-  text([#smallcaps(Abstract)], size: 1.2em)
-  if abstract != none {
-    abstract
-  } else {
-    lorem(10)
-  }
-}
-  
-
 #let acmart-keywords(keywords) = [
   #set par(first-line-indent: 0em)
-  text([#smallcaps(Keywords)], size: 1.2em)
   *_Keywords:_* 
   #keywords.join(", ")
 ]
@@ -447,9 +436,12 @@
     set text(size: .9em)
     it
   }
+  if abstract != none {
+    text([#smallcaps(Abstract)], size: 1.2em)
+    abstract
+  }
   
   show heading.where(level: 1): it => {
-    it.numbering = "1.1.1"
     set text(size: 1.2em)
     block(smallcaps(it.body))
   }
