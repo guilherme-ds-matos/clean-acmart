@@ -295,8 +295,6 @@
     red: rgb(97, 38, 103),
   ),
 
-  abstract: none,
-
   // The paper's content.
   body
 ) = {
@@ -435,10 +433,6 @@
     colbreak(weak: true)
     set text(size: .9em)
     it
-  }
-  if abstract != none {
-    text([#smallcaps(Abstract)], size: 1.2em)
-    abstract
   }
   
   show heading.where(level: 1): it => {
