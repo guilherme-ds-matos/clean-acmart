@@ -201,9 +201,7 @@
         author.remove("email"),
       ),
     ) 
-    block(width: 7in / (ncols + 0.1))[
-      #for (k, v) in author [\ #v]
-    ]
+    for (k, v) in author [\ #v]
   }
   for i in range(calc.ceil(authors.len() / ncols)) [
     #let end = calc.min((i + 1) * ncols, authors.len())
