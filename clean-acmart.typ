@@ -195,7 +195,7 @@
     ) + author.remove("mark", default: []) 
     linebreak()
     text(
-      0.5em,
+      0.8em,
       link(
         "mailto:" + to-string(author.at("email")),
         author.remove("email"),
