@@ -154,8 +154,7 @@
 // )
 #let acmart-ccs(ccs-concepts) = [
   #set par(first-line-indent: 0em)
-  #smallcaps(text([CCS Concepts],size: 1.2em))
-  
+  = CCS Concepts
   *
   #ccs-concepts.map(concept => 
     [ #sym.bullet #concept.generic #sym.arrow.r #concept.specific.join("; ")]
@@ -164,7 +163,7 @@
 ]
 
 #let acmart-abstract(abstract) = [
-  #smallcaps(text([Abstract],size: 1.2em))
+  = Abstract
   #if abstract != none {
     abstract
   } else {
@@ -175,8 +174,7 @@
 
 #let acmart-keywords(keywords) = [
   #set par(first-line-indent: 0em)
-  #smallcaps(text([Keywords],size: 1.2em))
-  *_Keywords:_* 
+  = Keywords 
   #keywords.join(", ")
 ]
 
