@@ -379,16 +379,17 @@
   set footnote.entry(indent: 0em)
   
   // Configure headings.
+  let heading_special = ([Abstract], [Acknowledgement], [CCS Concepts], [Keywords])
   set heading(numbering: "1.1.1")
   show heading: it => if it.numbering == none { it } else {
-    let numbering = if it.body in ([Abstract], [Acknowledgement], [CCS Concepts], [Keywords]) {
+    let numbering = if it.body in heading_special {
       none
     } else {
       counter(heading).display(it.numbering) + h(calc.max(.25em, 1em / it.level))
     }
-    let reset = it.body in ([Abstract], [Acknowledgement])
+    let reset = it.body in heading_special
     block(numbering + it.body)
-    if it.body in ([Abstract], [Acknowledgement]) {
+    if it.body in heading_special {
       counter(heading).update(0) 
     }
   }
