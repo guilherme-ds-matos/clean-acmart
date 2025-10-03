@@ -391,14 +391,14 @@
   // Configure headings.
   set heading(numbering: "1.1.1")
   show heading: it => if it.numbering == none { it } else {
-    let numbering = if it.body in ([Abstract], [Acknowledgement]) {
+    let numbering = if it.body in ([Abstract], [Acknowledgement], [CCS Concepts], [Keywords]) {
       none
     } else {
       counter(heading).display(it.numbering) + h(calc.max(.25em, 1em / it.level))
     }
-    let reset = it.body in ([Abstract], [Acknowledgement])
+    let reset = it.body in ([Abstract], [Acknowledgement], [CCS Concepts], [Keywords])
     block(numbering + it.body)
-    if it.body in ([Abstract], [Acknowledgement]) {
+    if it.body in ([Abstract], [Acknowledgement], [CCS Concepts], [Keywords]) {
       counter(heading).update(0) 
     }
   }
@@ -447,7 +447,7 @@
   }
   
   show heading.where(level: 1): it => if it.numbering == none {it} else {
-    let numbering = if it.body in ([Abstract], [Acknowledgement]) {
+    let numbering = if it.body in ([Abstract], [Acknowledgement], [CCS Concepts], [Keywords]) {
       none
     } else {
       counter(heading).display(it.numbering) + h(calc.max(.25em, 1em / it.level))
