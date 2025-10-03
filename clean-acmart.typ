@@ -453,7 +453,7 @@
       counter(heading).display(it.numbering) + h(calc.max(.25em, 1em / it.level))
     }
     set text(size: 1.2em)
-    block(numbering + (smallcaps(it.body)))
+    block(numbering + (upper(it.body)))
     if it.body in ([Abstract], [Acknowledgement], [CCS Concepts], [Keywords]) {
       counter(heading).update(0) 
     }
