@@ -447,7 +447,7 @@
     it
   }
   
-  show heading.where(level: 1): it => if it.numbering == none {it} else {
+  show heading.where(level: 1): it => {
     let numbering = if it.body in ([Abstract], [Acknowledgement]) {
       none
     } else {
