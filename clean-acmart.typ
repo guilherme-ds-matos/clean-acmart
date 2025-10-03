@@ -154,8 +154,8 @@
 // )
 #let acmart-ccs(ccs-concepts) = [
   #set par(first-line-indent: 0em)
+  = CCS Concepts: 
   *
-  _CCS Concepts:_ 
   #ccs-concepts.map(concept => 
     [ #sym.bullet #concept.generic #sym.arrow.r #concept.specific.join("; ")]
   ).join("; ").
@@ -164,7 +164,7 @@
 
 #let acmart-keywords(keywords) = [
   #set par(first-line-indent: 0em)
-  *_Keywords:_* 
+  = Keywords: 
   #keywords.join(", ")
 ]
 
@@ -195,7 +195,7 @@
     ) + author.remove("mark", default: []) 
     linebreak()
     text(
-      0.8em,
+      1em,
       link(
         "mailto:" + to-string(author.at("email")),
         author.remove("email"),
