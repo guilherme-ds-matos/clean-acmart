@@ -325,7 +325,7 @@
   show heading: set text(size: font-size)
   show heading.where(level: 1): it => block(width: 100%)[
     #set text(size: 1.2em)
-    #set smallcaps(it.body)
+    smallcaps(it.body)
   ]
   // Configure paragraph properties.
   // 12pt leading, i.e. 1.2x font-size (rule 3)
