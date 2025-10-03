@@ -209,7 +209,7 @@
     #let slice = authors.slice(i * ncols, end)
     #grid(
       columns: slice.len() * (1fr,),
-      gutter: 5em,
+      gutter: 2em,
       ..slice.map(author),
     ) <anon>
   ]
