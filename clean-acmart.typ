@@ -154,7 +154,7 @@
 // )
 #let acmart-ccs(ccs-concepts) = [
   #set par(first-line-indent: 0em)
-  = CCS Concepts: 
+  = CCS Concepts 
   *
   #ccs-concepts.map(concept => 
     [ #sym.bullet #concept.generic #sym.arrow.r #concept.specific.join("; ")]
@@ -164,7 +164,7 @@
 
 #let acmart-keywords(keywords) = [
   #set par(first-line-indent: 0em)
-  = Keywords: 
+  = Keywords 
   #keywords.join(", ")
 ]
 
