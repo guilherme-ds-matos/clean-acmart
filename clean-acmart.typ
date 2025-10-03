@@ -201,7 +201,7 @@
         author.remove("email"),
       ),
     ) 
-    block(width: calc.ceil(7in / (ncols + 0.1)))[
+    block(width: 7in / (ncols + 0.1))[
       #for (k, v) in author [\ #v]
     ]
   }
