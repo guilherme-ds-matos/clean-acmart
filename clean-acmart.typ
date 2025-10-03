@@ -163,7 +163,7 @@
 ]
 
 #let acmart-abstract(abstract) = {
-  text([#smallcaps(Abstract)], size: 1.2em)
+  text([#smallcaps([Abstract])], size: 1.2em)
   if abstract != none {
     abstract
   } else {
@@ -174,7 +174,7 @@
 
 #let acmart-keywords(keywords) = [
   #set par(first-line-indent: 0em)
-  text([#smallcaps(Keywords)], size: 1.2em)
+  text([#smallcaps([Keywords])], size: 1.2em)
   *_Keywords:_* 
   #keywords.join(", ")
 ]
