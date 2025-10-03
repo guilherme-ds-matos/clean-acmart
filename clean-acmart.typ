@@ -381,7 +381,7 @@
   // Configure headings.
   set heading(numbering: "1.1.1")
   show heading: it => if it.numbering == none { it } else {
-    let numbering = if it.body in ([Abstract], [Acknowledgement]) {
+    let numbering = if it.body in ([Abstract], [Acknowledgement], [CCS Concepts], [Keywords]) {
       none
     } else {
       counter(heading).display(it.numbering) + h(calc.max(.25em, 1em / it.level))
