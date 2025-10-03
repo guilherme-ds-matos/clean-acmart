@@ -454,7 +454,7 @@
     }
     set text(size: 1.2em)
     block(numbering + (smallcaps(it.body)))
-    if it.body in ([Abstract], [Acknowledgement]) {
+    if it.body in ([Abstract], [Acknowledgement], [CCS Concepts], [Keywords]) {
       counter(heading).update(0) 
     }
   }
