@@ -1,4 +1,4 @@
-#import "@preview/clean-acmart:0.0.1": acmart, acmart-ccs, acmart-keywords, acmart-ref, to-string
+#import "@local/clean-acmart:0.0.1": acmart, acmart-ccs, acmart-keywords, acmart-ref, to-string
 
 #let cuhk = super(sym.suit.spade)
 
@@ -16,6 +16,12 @@
     // Should I use string or content? It doesn't matter
     name: "FirstName1 Surname1",
     email: "email1@email.com",
+    mark: super(sym.suit.diamond),
+  ),
+  (
+    // Should I use string or content? It doesn't matter
+    name: "FirstName2 Surname2",
+    email: "email2@email.com",
     mark: super(sym.suit.diamond),
   ),
   (
@@ -72,6 +78,7 @@
 #show: acmart.with(
   title: title,
   authors: authors,
+  authors-ncols: 3,
   affiliations: affiliations,
   conference: conference,
   doi: doi,
