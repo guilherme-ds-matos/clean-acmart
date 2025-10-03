@@ -306,6 +306,7 @@
     red: rgb(97, 38, 103),
   ),
 
+  abstract: none,
 
   // The paper's content.
   body
@@ -448,16 +449,8 @@
   }
   
   show heading.where(level: 1): it => {
-    let numbering = if it.body in ([Abstract], [Acknowledgement]) {
-      none
-    } else {
-      counter(heading).display(it.numbering) + h(calc.max(.25em, 1em / it.level))
-    }
     set text(size: 1.2em)
-    block(numbering + (smallcaps(it.body)))
-    if it.body in ([Abstract], [Acknowledgement]) {
-      counter(heading).update(0) 
-    }
+    it.numbering + block(smallcaps(it.body))
   }
   // Display the paper's contents.
   body
