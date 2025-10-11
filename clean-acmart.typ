@@ -438,6 +438,8 @@
     set text(size: .9em)
     it
   }
+
+  show heading: it => block(v(1em) + it)
   
   // Display the paper's contents.
   body
